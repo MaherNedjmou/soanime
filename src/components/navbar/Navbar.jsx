@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import "./Navbar.css"
 import logo from "../../assets/soanime_logo.png"
-import { IoMenu } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5"
+import { Link } from "react-router"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -16,35 +17,34 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navigateTo = (hash) => {
-    window.location.hash = hash
-    setMenuOpen(false)
-  }
-
   return (
     <nav className={scrolled ? "scrolled" : ""}>
-        <img
-          className="navbar-logo"
-          src={logo}
-          alt="Logo"
-          onClick={() => navigateTo("")}
-          style={{ cursor: "pointer" }}
-        />
-        <IoMenu onClick={() => setMenuOpen(!menuOpen)} className="navbar-menu" />
+      <Link to="/" onClick={() => setMenuOpen(false)}>
+        <img className="navbar-logo" src={logo} alt="Logo" />
+      </Link>
+      <IoMenu onClick={() => setMenuOpen(!menuOpen)} className="navbar-menu" />
 
-        {menuOpen && 
-          <ul className="navbar-links-mobile">
-            <li onClick={() => navigateTo("")}>Home</li>
-            <li onClick={() => navigateTo("animes")}>Anime List</li>
-            <li>SIGN IN</li>
-          </ul>
-        }
-        
-        <ul className="navbar-links">
-            <li onClick={() => navigateTo("")}>Home</li>
-            <li onClick={() => navigateTo("animes")}>Anime List</li>
-            <li className="navbar-signin">SIGN IN</li>
+      {menuOpen && (
+        <ul className="navbar-links-mobile">
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            <li>Home</li>
+          </Link>
+          <Link to="/animes" onClick={() => setMenuOpen(false)}>
+            <li>Anime List</li>
+          </Link>
+          <li>SIGN IN</li>
         </ul>
+      )}
+
+      <ul className="navbar-links">
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/animes">
+          <li>Anime List</li>
+        </Link>
+        <li className="navbar-signin">SIGN IN</li>
+      </ul>
     </nav>
   )
 }

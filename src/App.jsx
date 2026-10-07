@@ -1,39 +1,29 @@
-import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router'
+import { useEffect } from 'react'
 import './App.css'
-import Hero from './sections/hero/Hero'
-import Trending from './sections/trending/Trending'
-import Viewed from './sections/viewed/Viewed'
-import Categories from './sections/categories/Categories'
-import Footer from './components/footer/Footer'
+import Home from './pages/home/Home'
 import Animes from './pages/animes/Animes'
 
-function App() {
-  const [currentPage, setCurrentPage] = useState(() => {
-    return window.location.hash === '#animes' ? 'animes' : 'home'
-  })
+function ScrollToTop() {
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    const handleHashChange = () => {
-      setCurrentPage(window.location.hash === '#animes' ? 'animes' : 'home')
-      window.scrollTo(0, 0)
-    }
+    window.scrollTo(0, 0)
+  }, [pathname])
 
-    window.addEventListener('hashchange', handleHashChange)
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
+  return null
+}
 
-  if (currentPage === 'animes') {
-    return <Animes />
-  }
-
+function App() {
   return (
-    <>
-      <Hero />
-      <Trending />
-      <Viewed />
-      <Categories />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/animes" element={<Animes />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,6 +1,7 @@
 // Trending.jsx
 import "./Trending.css"
 import CardTrending from "../../components/cardTrending/CardTrending"
+import { Link } from "react-router"
 
 const animes = [
   {
@@ -63,7 +64,9 @@ const Trending = () => {
           <p className="trending-tag">TRENDING</p>
           <h2 className="trending-title">Trending Animes</h2>
         </div>
-        <button className="trending-view-all" onClick={() => window.location.hash = 'animes'}>VIEW ALL</button>
+        <Link to="/animes">
+          <button className="trending-view-all">VIEW ALL</button>
+        </Link>
       </div>
 
       {/* Cards */}

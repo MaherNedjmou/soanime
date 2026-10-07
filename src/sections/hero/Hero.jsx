@@ -11,7 +11,12 @@ const Hero = () => {
         <div className='hero-left'>
           <h2>WELCOME TO SOANIME</h2>
           <h1>BEST <span>ANIME</span> SITE EVER!</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, commodi consequuntur natus, adipisci neque esse iusto eum assumenda ratione repudiandae aspernatur asperiores at mollitia in quae ducimus aperiam? Quidem, placeat!</p>
+          <p>
+            Discover your favorite anime series and movies, all in one place!
+            With high quality and fast streaming.
+            You can watch anytime and anywhere.
+            No ads, no interruptions, just pure anime goodness.
+          </p>
           <div className='search-bar'>
             <input type="text" placeholder="Search for anime..." />
             <button>SEARCH</button>

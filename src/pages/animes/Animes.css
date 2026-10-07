@@ -50,7 +50,7 @@
     line-height: 1.6;
 }
 
-/* ===== Search Bar ===== */
+/*  Search Bar  */
 .animes-search-bar {
     display: inline-flex;
     align-items: center;
@@ -90,7 +90,7 @@
     white-space: nowrap;
 }
 
-/* ===== Genre Filter Section ===== */
+/*  Genre Filter Section  */
 .animes-filter-section {
     padding: 4rem 15% 1rem;
 }
@@ -146,7 +146,7 @@
     transform: translateY(-2px);
 }
 
-/* ===== Results Section ===== */
+/*  Results Section  */
 .animes-results-section {
     padding: 2rem 15% 5rem;
 }
@@ -169,7 +169,7 @@
     color: var(--primary-color);
 }
 
-/* ===== Anime Grid ===== */
+/*  Anime Grid  */
 .animes-grid {
     width: 100%;
     display: flex;
@@ -177,7 +177,7 @@
     gap: 1.1rem;
 }
 
-/* ===== Empty State ===== */
+/*  Empty State  */
 .animes-empty {
     width: 100%;
     text-align: center;
@@ -185,11 +185,6 @@
     background-color: var(--background-color-secondary);
     border-radius: 16px;
     margin-top: 1rem;
-}
-
-.animes-empty-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
 .animes-empty h3 {
@@ -204,7 +199,7 @@
     font-size: 1rem;
 }
 
-/* ===== Responsive Design ===== */
+/*  Responsive  */
 @media (max-width: 768px) {
     .animes-hero {
         padding: 7rem 5% 3.5rem;

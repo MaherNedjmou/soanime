@@ -1,5 +1,6 @@
 import "./Viewed.css"
 import CardViewed from "../../components/cardViewed/CardViewed"
+import { Link } from "react-router"
 
 const animes = [
   {
@@ -51,7 +52,9 @@ const Viewed = () => {
           <p className="most-viewed-tag">Top Animes</p>
           <h2 className="most-viewed-title">Most Viewed</h2>
         </div>
-        <button className="most-viewed-view-all" onClick={() => window.location.hash = 'animes'}>View All</button>
+        <Link to="/animes">
+          <button className="most-viewed-view-all">View All</button>
+        </Link>
       </div>
  
       <div className="most-viewed-grid">
