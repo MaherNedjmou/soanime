@@ -63,7 +63,7 @@ const Trending = () => {
           <p className="trending-tag">TRENDING</p>
           <h2 className="trending-title">Trending Animes</h2>
         </div>
-        <button className="trending-view-all">VIEW ALL</button>
+        <button className="trending-view-all" onClick={() => window.location.hash = 'animes'}>VIEW ALL</button>
       </div>
 
       {/* Cards */}

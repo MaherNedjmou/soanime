@@ -33,8 +33,8 @@ const Categories = () => {
   return (
     <section className="top-categories">
       <div className="top-categories-header">
-        <p className="top-categories-tag">Categories</p>
-        <h2 className="top-categories-title">Top Categories</h2>
+        <p className="top-categories-tag">Genres</p>
+        <h2 className="top-categories-title">Top Genres</h2>
       </div>
 
       <div className="top-categories-grid">

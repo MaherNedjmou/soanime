@@ -16,22 +16,33 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const navigateTo = (hash) => {
+    window.location.hash = hash
+    setMenuOpen(false)
+  }
+
   return (
     <nav className={scrolled ? "scrolled" : ""}>
-        <img className="navbar-logo" src={logo} alt="Logo" />
+        <img
+          className="navbar-logo"
+          src={logo}
+          alt="Logo"
+          onClick={() => navigateTo("")}
+          style={{ cursor: "pointer" }}
+        />
         <IoMenu onClick={() => setMenuOpen(!menuOpen)} className="navbar-menu" />
 
         {menuOpen && 
           <ul className="navbar-links-mobile">
-            <li>Home</li>
-            <li>Anime List</li>
+            <li onClick={() => navigateTo("")}>Home</li>
+            <li onClick={() => navigateTo("animes")}>Anime List</li>
             <li>SIGN IN</li>
           </ul>
         }
         
         <ul className="navbar-links">
-            <li>Home</li>
-            <li>Anime List</li>
+            <li onClick={() => navigateTo("")}>Home</li>
+            <li onClick={() => navigateTo("animes")}>Anime List</li>
             <li className="navbar-signin">SIGN IN</li>
         </ul>
     </nav>

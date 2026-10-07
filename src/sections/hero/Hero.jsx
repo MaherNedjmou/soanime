@@ -14,7 +14,7 @@ const Hero = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, commodi consequuntur natus, adipisci neque esse iusto eum assumenda ratione repudiandae aspernatur asperiores at mollitia in quae ducimus aperiam? Quidem, placeat!</p>
           <div className='search-bar'>
             <input type="text" placeholder="Search for anime..." />
-            <button>SEARCH NOW</button>
+            <button>SEARCH</button>
           </div>
         </div>
         {/* right side */}

@@ -51,7 +51,7 @@ const Viewed = () => {
           <p className="most-viewed-tag">Top Animes</p>
           <h2 className="most-viewed-title">Most Viewed</h2>
         </div>
-        <button className="most-viewed-view-all">View All</button>
+        <button className="most-viewed-view-all" onClick={() => window.location.hash = 'animes'}>View All</button>
       </div>
  
       <div className="most-viewed-grid">
